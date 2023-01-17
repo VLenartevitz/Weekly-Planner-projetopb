@@ -1,13 +1,23 @@
 import React from "react"
 import { Container } from "../Componentes/Container";
-import ImgOul from "../Componentes/ImgUol/ImgOul";
-import ImgLaptop from "../Componentes/LaptopImg/ImgLaptop";
+import logoUol from '../imgs/logoUol.svg'
+import { ImgUolStyle } from "../Componentes/ImgUol/styles";
+import {InputCadastro} from '../Componentes/InputCadastro/index.js'
+import { LaptopImg } from "../Componentes/LaptopImg/styles";
+import { PositionUol } from "../Componentes/PositionUol/style";
 
 const Cadastro = () =>{
     return (
     <Container>
-        <ImgLaptop />
-        <ImgOul />
+        <InputCadastro>
+            
+        </InputCadastro>
+
+        <LaptopImg>
+            <PositionUol>
+                <ImgUolStyle src={logoUol}/>  
+            </PositionUol>  
+        </LaptopImg>
     </Container>
     );
 }
