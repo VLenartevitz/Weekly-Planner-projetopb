@@ -9,6 +9,9 @@ const App = () =>{
       <Routes>
       <Route path='/' element={<Cadastro/>}/>
       </Routes>
+      <Routes>
+        <Route path='/Login' element={<Login/>}/>
+      </Routes>
     </BrowserRouter>
         
   );
