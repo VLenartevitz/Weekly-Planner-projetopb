@@ -9,14 +9,16 @@ import Input from "../Componentes/Input/index.js";
 import {PosiInput, StyleInput} from '../Componentes/Input/style.js'
 import Btn from "../Componentes/Btn";
 import TextLogin from "../Componentes/TextLogin";
+import BtnVoltarCad from "../Componentes/BtnVoltarCad";
+import IconeUser from "../Componentes/IconeUser";
 
 const Login = () =>{
     return(
         <Container>
             <WrapperEs> 
-            <Title />
-            <TextLogin></TextLogin>
+            <Title text='To continue browsing safely, log in to the network.'/>
                 <PosiInput>
+                <TextLogin />
                      <Input
                      type='text'
                      
@@ -29,7 +31,9 @@ const Login = () =>{
                      name='primeiro nome'
                      placeholder='password'
                      />
-                    <Btn />
+                     <IconeUser></IconeUser>
+                    <Btn textButton='Log in'/>
+                    <BtnVoltarCad path='/' textButton='voltar para a tela de login'/>
                 </PosiInput>
             </WrapperEs>
 

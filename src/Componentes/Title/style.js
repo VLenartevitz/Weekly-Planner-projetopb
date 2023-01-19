@@ -12,7 +12,6 @@ export const Text = styled.text`
     font-size: 16px;
 
 `
-
 export const PositionTitle = styled.div`
     margin-top: 94px;
     display: flex;

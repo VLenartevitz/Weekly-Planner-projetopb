@@ -9,13 +9,14 @@ import Title from "../Componentes/Title/index.js";
 import Input from "../Componentes/Input/index.js";
 import {PosiInput, StyleInput} from '../Componentes/Input/style.js'
 import Btn from "../Componentes/Btn";
-import TextLogin from "../Componentes/TextLogin";
+import { Link } from "react-router-dom";
+import BtnVoltarCad from '../Componentes/BtnVoltarCad/index.js'
 
 const Cadastro = () =>{
     return (
     <Container>
         <WrapperEs>
-            <Title />
+            <Title text='Please,register to continue'/>
                 <PosiInput>
                      <Input
                      type='text'
@@ -65,8 +66,8 @@ const Cadastro = () =>{
                      name='confirma senha'
                      placeholder='Confirm your password'
                      /> 
-
-                    <Btn></Btn>
+                    <Btn path='/Login' textButton='Register Now'/>
+                    <BtnVoltarCad path='/Login' textButton='Ja tem cadastro?faça login'/>
                 </PosiInput>
         </WrapperEs>
 

@@ -7,10 +7,10 @@ const App = () =>{
   return (
     <BrowserRouter>
       <Routes>
-      <Route path='/' element={<Cadastro/>}/>
+      <Route path='/' exact element={<Cadastro/>}/>
       </Routes>
       <Routes>
-        <Route path='/Login' element={<Login/>}/>
+        <Route path='/Login' exact element={<Login/>}/>
       </Routes>
     </BrowserRouter>
         

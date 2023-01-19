@@ -6,8 +6,8 @@ const Title = ( props ) => {
     return (
         <PositionTitle>
             <MarginTitle>
-            <Welcome>Welcome</Welcome>
-            <Text>Please, register to continue</Text>
+            <Welcome>Welcome,</Welcome>
+            <Text>{props.text}</Text>
             </MarginTitle>
         </PositionTitle>
     );
