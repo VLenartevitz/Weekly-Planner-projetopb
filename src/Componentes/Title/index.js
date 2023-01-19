@@ -7,7 +7,7 @@ const Title = ( props ) => {
         <PositionTitle>
             <MarginTitle>
             <Welcome>Welcome,</Welcome>
-            <Text>{props.text}</Text>
+            <Text>{props.titletext}</Text>
             </MarginTitle>
         </PositionTitle>
     );

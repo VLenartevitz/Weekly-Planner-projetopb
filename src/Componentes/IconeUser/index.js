@@ -1,10 +1,10 @@
 import imgUser from '../../imgs/imgUser.svg'
-import { ImgUser } from './style'
+import { TamIcone } from './style';
 
 const IconeUser = () =>{
     return (
         <>
-        <image></image>
+        <TamIcone src='../../imgs/imgUser.svg'></TamIcone>
         </>
     );
 }

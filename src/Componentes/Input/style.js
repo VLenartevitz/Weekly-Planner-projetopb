@@ -3,19 +3,18 @@ import styled from "styled-components";
 
 export const Label = styled.label`
     color: #E0E0E0;
-    display: flex;
-    margin-right: 2em;
+    
 `
 export const StyleInput = styled.input`
     height: 3.75rem;
     width: 23.688rem;
     border-radius: 3.125rem;
     background-color: #26292C;
-    border-color:#FFFFFF;
+    border-color: white;
     margin-top: 1.125rem;
     &::placeholder{
-        color: white;
         display: flex;
+        color: white;
         font-size: 12px;
         line-height: 15px;
         color: #E0E0E0;
@@ -27,19 +26,24 @@ export const PosiInput = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 4.188rem;
     
 `
-export const PosiLabel = styled.div`
-    flex-direction: row;
+export const PosiForm = styled.div`
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
-`
+    justify-content:space-between;
+    width: 471px;
+    `
 
 export const LocalInput = styled.div`
-    justify-content: flex-end;
+    
+    justify-content:flex-end ;
 `
 export const LocalLabel = styled.div`
+    width: 75px;
+    text-align: left;
+
     justify-content: flex-start;
+    align-items: center;
 `

@@ -1,10 +1,12 @@
-import {Label, LocalInput, LocalLabel, PosiLabel, StyleInput} from './style.js'
+import {Label, LocalInput, LocalLabel, PosiForm, StyleInput} from './style.js'
 
 
 const Input =({ type, text, name, placeholder, hadleOnChange, value}) =>{
     return(
-        <PosiLabel>
-            <LocalLabel><Label>{text}</Label></LocalLabel>
+        <PosiForm>
+            <LocalLabel>
+                <Label>{text}</Label>
+            </LocalLabel>
             <LocalInput>
                 <StyleInput 
                 type={type} 
@@ -15,7 +17,7 @@ const Input =({ type, text, name, placeholder, hadleOnChange, value}) =>{
                 value={value}>
                 </StyleInput>
             </LocalInput>
-        </PosiLabel>
+        </PosiForm>
         
     );
 

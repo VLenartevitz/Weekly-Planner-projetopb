@@ -7,7 +7,7 @@ export const Welcome = styled.h1`
     
 `
 
-export const Text = styled.text`
+export const Text = styled.p`
     color: #e0e0e0;
     font-size: 16px;
 

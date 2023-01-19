@@ -31,7 +31,7 @@ const Login = () =>{
                      name='primeiro nome'
                      placeholder='password'
                      />
-                     <IconeUser></IconeUser>
+                     <IconeUser />
                     <Btn textButton='Log in'/>
                     <BtnVoltarCad path='/' textButton='voltar para a tela de login'/>
                 </PosiInput>

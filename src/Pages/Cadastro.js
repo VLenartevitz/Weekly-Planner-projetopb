@@ -1,4 +1,4 @@
-import React from "react"
+import React,{useState} from "react"
 import { Container } from "../Componentes/Container";
 import logoUol from '../imgs/logoUol.svg';
 import { ImgUolStyle } from "../Componentes/ImgUol/styles";
@@ -13,16 +13,30 @@ import { Link } from "react-router-dom";
 import BtnVoltarCad from '../Componentes/BtnVoltarCad/index.js'
 
 const Cadastro = () =>{
+
+    const [name,setName]=useState('')
+
+    const armazenar=(chave,valor) =>{
+        localStorage.setItem(chave,valor)
+        console.log('teste')
+    }
+    React.useEffect(()=>{
+        console.log('teste')
+    },[])
+
+
     return (
     <Container>
         <WrapperEs>
-            <Title text='Please,register to continue'/>
+            <Title titletext='Please,register to continue'/>
                 <PosiInput>
                      <Input
                      type='text'
                      text='first name'
                      name='primeiro nome'
                      placeholder='Your first name'
+                     value={name}
+                     onChange={(e)=>armazenar('namestore',e.target.value)}
                      />
                      <Input
                      type='text'
@@ -66,7 +80,7 @@ const Cadastro = () =>{
                      name='confirma senha'
                      placeholder='Confirm your password'
                      /> 
-                    <Btn path='/Login' textButton='Register Now'/>
+                    <Btn  textButton='Register Now' onClick={armazenar('ls_nome',name)}/>
                     <BtnVoltarCad path='/Login' textButton='Ja tem cadastro?faça login'/>
                 </PosiInput>
         </WrapperEs>
