@@ -1,9 +1,9 @@
 import { StyleBtn } from "./style";
 import { Link } from "react-router-dom";
 
-const Btn = ( props ) =>{
+const BtnLogin = ( props ) =>{
     return (
         <StyleBtn onClick={props.onClick}>{props.textButton}</StyleBtn>
     );
 };
-export default Btn;
+export default BtnLogin;

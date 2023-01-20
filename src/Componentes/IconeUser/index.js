@@ -1,11 +1,9 @@
 import imgUser from '../../imgs/imgUser.svg'
 import { TamIcone } from './style';
 
-const IconeUser = () =>{
+const IconeUser = (props) =>{
     return (
-        <>
-        <TamIcone src='../../imgs/imgUser.svg'></TamIcone>
-        </>
+        <TamIcone src={imgUser} movimento={props.movimentox} /> 
     );
 }
 export default IconeUser;
