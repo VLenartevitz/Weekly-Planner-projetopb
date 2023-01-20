@@ -9,6 +9,6 @@ export const StyleBtn = styled.button`
     font-size: 32px;
     color: #ffffff;
     box-sizing: border-box;
-    
+    margin-left: -2.5em;
 
 `

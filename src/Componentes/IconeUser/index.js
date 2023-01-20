@@ -3,7 +3,7 @@ import { TamIcone } from './style';
 
 const IconeUser = (props) =>{
     return (
-        <TamIcone src={imgUser} movimento={props.movimentox} /> 
+        <TamIcone src={imgUser} movimentouser={props.movimentoxuser} /> 
     );
 }
 export default IconeUser;

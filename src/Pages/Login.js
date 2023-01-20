@@ -9,12 +9,14 @@ import BtnLogin from '../Componentes/BtnLogin/index.js'
 import TextLogin from "../Componentes/TextLogin";
 import BtnVoltarCad from "../Componentes/BtnVoltarCad";
 import IconeUser from "../Componentes/IconeUser";
-import { LocalInput, PosiForm, PosiInput, StyleInput } from "../Componentes/Input";
+import { LocalInput, PosiFormLogin, PosiInput, StyleInput } from "../Componentes/Input";
 import { useState } from "react";
+import IconeSenha from "../Componentes/IconeSenha";
 
 const Login = () =>{
 
-    const [movimento,setMovimento]=useState(false)
+    const [movimentouser,setMovimentouser]=useState(false)
+    const [movimentosenha,setMovimentosenha]=useState(false)
 
     return(
         <Container>
@@ -22,26 +24,28 @@ const Login = () =>{
             <Title titletext='To continue browsing safely, log in to the network.'/>
                 <PosiInput>
                 <TextLogin />
-                <IconeUser movimentox={movimento}/>
-                    <PosiForm>
+                    <PosiFormLogin>
+                        <IconeUser movimentoxuser={movimentouser}/>
                         <LocalInput>
                             <StyleInput
                             type='text'
                             name='confirma senha'
                             placeholder='user name'
-                            onChange={()=>{setMovimento(true)}}
+                            onChange={()=>{setMovimentouser(true)}}
                             />  
                         </LocalInput>
-                    </PosiForm>
-                    <PosiForm>
+                    </PosiFormLogin>
+                     <PosiFormLogin>
+                     <IconeSenha movimentoxsenha={movimentosenha}/>
                         <LocalInput>
                             <StyleInput
                             type='text'
                             name='password'
                             placeholder='password'
+                            onChange={(e)=>{setMovimentosenha(e.target.value)}}
                             />  
                         </LocalInput>
-                    </PosiForm>
+                    </PosiFormLogin> 
                      
                     <BtnLogin textButton='Log in'/>
                     <BtnVoltarCad path='/' textButton='voltar para a tela de Cadastro'/>

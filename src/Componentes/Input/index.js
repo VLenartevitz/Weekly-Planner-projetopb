@@ -10,7 +10,7 @@ export const StyleInput = styled.input`
     &::placeholder{
         display: flex;
         color: white;
-        font-size: 12px;
+        font-size: 16px;
         line-height: 15px;
         color: #E0E0E0;
         padding-left:3rem;
@@ -31,7 +31,15 @@ export const PosiForm = styled.div`
     justify-content:space-between;
     width: 471px;
     `
+    export const PosiFormLogin = styled.div`
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content:space-between;
+    width: 471px;
+    `
 
 export const LocalInput= styled.div`
     justify-content:flex-end ;
+   
 `

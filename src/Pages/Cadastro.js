@@ -14,7 +14,7 @@ import { LocalLabel } from "../Componentes/Label/style";
 
 const Cadastro = () =>{
 
-    const [lastName,setUser,firstName,user,birthDate,country,city,email,password,confirmPassword]=useState({
+    const [itemLocalStorage,setItemLocalStorage]=useState({
         firstName:'',
         lastName:'',
         birthDate:'',
@@ -26,7 +26,8 @@ const Cadastro = () =>{
     });
 
     const armazenar=(chave,valor) =>{
-        localStorage.setItem(chave,valor)
+        localStorage.setItem(chave,JSON.stringify(valor))
+        
     }
 
 
@@ -44,8 +45,8 @@ const Cadastro = () =>{
                             type='text'
                             name='primeiro nome'
                             placeholder='Your first name'
-                            value={firstName}
-                            onChange={(e)=>setUser(e.target.value)}
+                            value={itemLocalStorage.firstName}
+                            onChange={(e)=>setItemLocalStorage({...itemLocalStorage, firstName: e.target.value})}
                             >
                             </StyleInput>
                         </LocalInput>
@@ -60,8 +61,8 @@ const Cadastro = () =>{
                             type='text'
                             name='sobrenome'
                             placeholder='Your last name'
-                            value={lastName}
-                            onChange={(e)=>setUser(e.target.value)}
+                            value={itemLocalStorage.lastName}
+                            onChange={(e)=>setItemLocalStorage({...itemLocalStorage, lastName: e.target.value})}
                             />
                         </LocalInput>
                     </PosiForm>
@@ -74,8 +75,8 @@ const Cadastro = () =>{
                             type='text'
                             name='nascimento'
                             placeholder='MM/DD/YYYY'
-                            value={birthDate}
-                            onChange={(e)=>setUser(e.target.value)}
+                            value={itemLocalStorage.birthDate}
+                            onChange={(e)=>setItemLocalStorage({...itemLocalStorage, birthDate: e.target.value})}
                             />
                         </LocalInput>
                     </PosiForm>
@@ -90,8 +91,8 @@ const Cadastro = () =>{
                             type='text'
                             name='Country'
                             placeholder='Your Country'
-                            value={country}
-                            onChange={(e)=>setUser(e.target.value)}
+                            value={itemLocalStorage.country}
+                            onChange={(e)=>setItemLocalStorage({...itemLocalStorage, country: e.target.value})}
                             />
                         </LocalInput>
                     </PosiForm>
@@ -104,8 +105,8 @@ const Cadastro = () =>{
                             type='text'
                             name='cidade'
                             placeholder='Your City'
-                            value={city}
-                            onChange={(e)=>setUser(e.target.value)}
+                            value={itemLocalStorage.city}
+                            onChange={(e)=>setItemLocalStorage({...itemLocalStorage, city: e.target.value})}
                             />
                         </LocalInput>
                     </PosiForm>
@@ -119,8 +120,8 @@ const Cadastro = () =>{
                             text='e-mail'
                             name='email'
                             placeholder='A valid e-mail here'
-                            value={email}
-                            onChange={(e)=>setUser(e.target.value)}
+                            value={itemLocalStorage.email}
+                            onChange={(e)=>setItemLocalStorage({...itemLocalStorage, email: e.target.value})}
                             />
                         </LocalInput>
                     </PosiForm>
@@ -133,8 +134,8 @@ const Cadastro = () =>{
                             type='text'
                             name='senha'
                             placeholder='Your password'
-                            value={password}
-                            onChange={(e)=>setUser(e.target.value)}
+                            value={itemLocalStorage.password}
+                            onChange={(e)=>setItemLocalStorage({...itemLocalStorage, password: e.target.value})}
                             />
                         </LocalInput>
                     </PosiForm>
@@ -147,12 +148,12 @@ const Cadastro = () =>{
                             type='text'
                             name='confirma senha'
                             placeholder='Confirm your password'
-                            value={confirmPassword}
-                            onChange={(e)=>setUser(e.target.value)}
+                            value={itemLocalStorage.confirmPassword}
+                            onChange={(e)=>setItemLocalStorage({...itemLocalStorage, confirmPassword: e.target.value})}
                             />  
                         </LocalInput>
                     </PosiForm>
-                    <Btn textButton='Register Now'  onClick={(e)=>armazenar('ls_name',firstName,lastName,birthDate,country,city,email,password,confirmPassword)}/>
+                    <Btn textButton='Register Now'  onClick={(e)=>armazenar('ls_name',itemLocalStorage)}/>
                     <BtnVoltarCad path='/Login' textButton='Ja tem cadastro?faça login'/>
                 </PosiInput>
         </WrapperEs>
