@@ -4,8 +4,8 @@ import { Text } from "./style";
 
 const Title = ( props ) => {
     return (
-        <PositionTitle>
-            <MarginTitle>
+        <PositionTitle margintop={props.margintop}>
+            <MarginTitle margintitle={props.margintitle}>
             <Welcome>Welcome,</Welcome>
             <Text>{props.titletext}</Text>
             </MarginTitle>

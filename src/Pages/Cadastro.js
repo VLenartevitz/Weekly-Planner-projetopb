@@ -6,7 +6,7 @@ import { WrapperEs} from '../Componentes/WrapperEs/style.js';
 import { LaptopImg } from "../Componentes/LaptopImg/styles";
 import { PositionUol } from "../Componentes/PositionUol/style";
 import Title from "../Componentes/Title/index.js";
-import { LocalInput, PosiForm, PosiInput, StyleInput} from '../Componentes/Input/index.js'
+import { LocalInput, PosiForm, PosiInput, StyleInput, StyleInputSenha} from '../Componentes/Input/index.js'
 import Btn from "../Componentes/Btn";
 import BtnVoltarCad from '../Componentes/BtnVoltarCad/index.js'
 import Label from "../Componentes/Label/index.js";
@@ -34,7 +34,7 @@ const Cadastro = () =>{
     return (
     <Container>
         <WrapperEs>
-            <Title titletext='Please,register to continue'/>
+            <Title margintop={5} titletext='Please,register to continue' margintitle={false} />
                 <PosiInput>
                     <PosiForm>
                         <LocalLabel>
@@ -131,7 +131,7 @@ const Cadastro = () =>{
                         </LocalLabel>
                         <LocalInput>
                             <StyleInput
-                            type='text'
+                            type='password'
                             name='senha'
                             placeholder='Your password'
                             value={itemLocalStorage.password}
@@ -145,7 +145,7 @@ const Cadastro = () =>{
                         </LocalLabel>
                         <LocalInput>
                             <StyleInput
-                            type='text'
+                            type='password'
                             name='confirma senha'
                             placeholder='Confirm your password'
                             value={itemLocalStorage.confirmPassword}

@@ -14,13 +14,17 @@ export const Text = styled.p`
 
 `
 export const PositionTitle = styled.div`
-    margin-top: 5rem;
+    margin-top: ${(props) => props.margintop}rem;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
 `
 
+
 export const MarginTitle = styled.div`
-    margin-left: -14rem;
+    margin-left: ${(props) => props.margintitle ? '-6rem' : '-12rem'} ; 
+
+    
 `
