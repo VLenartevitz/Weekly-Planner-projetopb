@@ -64,7 +64,7 @@ const Cadastro = () =>{
                             <Label labelText='first name'></Label>
                         </LocalLabel>
                         <LocalInput>
-                            <StyleInput required
+                            <StyleInput 
                             type='text'
                             name='primeiro nome'
                             placeholder='Your first name'
@@ -80,7 +80,7 @@ const Cadastro = () =>{
                             <Label labelText='last name'></Label>
                         </LocalLabel>
                         <LocalInput>
-                            <StyleInput required
+                            <StyleInput 
                             type='text'
                             name='sobrenome'
                             placeholder='Your last name'
@@ -94,8 +94,8 @@ const Cadastro = () =>{
                             <Label labelText='birth date'></Label>
                         </LocalLabel>
                         <LocalInput>
-                            <StyleInput required
-                            type='date'
+                            <StyleInput 
+                            type='text'
                             name='nascimento'
                             placeholder='MM/DD/YYYY'
                             value={itemLocalStorage.birthDate}
@@ -110,7 +110,7 @@ const Cadastro = () =>{
                             <Label labelText='Country'></Label>
                         </LocalLabel>
                         <LocalInput>
-                            <StyleInput required
+                            <StyleInput 
                             type='text'
                             name='Country'
                             placeholder='Your Country'
@@ -124,7 +124,7 @@ const Cadastro = () =>{
                             <Label labelText='City'></Label>
                         </LocalLabel>
                         <LocalInput>
-                            <StyleInput required
+                            <StyleInput 
                             type='text'
                             name='cidade'
                             placeholder='Your City'
@@ -138,7 +138,7 @@ const Cadastro = () =>{
                             <Label labelText='e-mail'></Label>
                         </LocalLabel>
                         <LocalInput>
-                            <StyleInput required
+                            <StyleInput 
                             type='email'
                             text='e-mail'
                             name='email'
@@ -153,7 +153,7 @@ const Cadastro = () =>{
                             <Label labelText='password'></Label>
                         </LocalLabel>
                         <LocalInput>
-                            <StyleInput required
+                            <StyleInput 
                             type='password'
                             name='senha'
                             placeholder='Your password'
@@ -167,7 +167,7 @@ const Cadastro = () =>{
                             <Label labelText='password'></Label>
                         </LocalLabel>
                         <LocalInput>
-                            <StyleInput required
+                            <StyleInput 
                             type='password'
                             name='confirma senha'
                             placeholder='Confirm your password'

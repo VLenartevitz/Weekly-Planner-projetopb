@@ -13,9 +13,33 @@ import IconeUser from "../Componentes/IconeUser";
 import { LocalInput, PosiFormLogin, PosiInput, StyleInput, StyleInputSenha } from "../Componentes/Input";
 import { useState } from "react";
 import IconeSenha from "../Componentes/IconeSenha";
+import { useNavigate } from "react-router-dom";
 
 const Login = () =>{
+    const navigate = useNavigate()
+
+    const [itemLocalStorage,setItemLocalStorage]=useState({
+        firstName:'',
+        password:'',
+    });
+
     
+    const validarDadosLogin =(chave) =>{
+        const dados = JSON.parse(localStorage.getItem(chave))
+        let fullName = dados.firstName + " " + dados.lastName
+        console.log(dados)
+        console.log(itemLocalStorage.firstName,itemLocalStorage.password)
+        if (itemLocalStorage.firstName !== fullName || itemLocalStorage.firstName !== dados.email) return alert('incorrect name')
+        if (itemLocalStorage.password !== dados.password) return alert('incorrect password')
+        navigate('/Dashboard')}
+
+    // const inputChangeHandler = (event) =>{
+    //     console.log(event.target.name)
+    //     if ( event.target.name === 'user' ){
+    //         setItemLocalStorage({...itemLocalStorage, firstName: event.target.value })
+    //     } else {setItemLocalStorage({...itemLocalStorage, password: event.target.value })}
+    // }
+
 
     const [movimentouser,setMovimentouser]=useState(false)
     const [movimentosenha,setMovimentosenha]=useState(false)
@@ -31,9 +55,12 @@ const Login = () =>{
                         <LocalInput>
                             <StyleInput
                             type='text'
-                            name='confirma senha'
+                            name='user'
                             placeholder='user name'
-                            onChange={(e)=>{setMovimentouser(e.target.value)}}
+                            value={itemLocalStorage.firstName}
+                            onChange={(e)=>{setItemLocalStorage({...itemLocalStorage, firstName: e.target.value});setMovimentouser(true)}}
+                            onFocus={()=>setMovimentouser(true)}
+                            onBlur={()=> {if (itemLocalStorage.firstName.length == 0) {setMovimentouser(false)}}}
                             />  
                         </LocalInput>
                     </PosiFormLogin>
@@ -44,12 +71,15 @@ const Login = () =>{
                             type='password'
                             name='password'
                             placeholder='password'
-                            onChange={(e)=>{setMovimentosenha(e.target.value)}}
+                            value={itemLocalStorage.password}
+                            onChange={(e)=>{setItemLocalStorage({...itemLocalStorage, password: e.target.value});setMovimentosenha(true)}}
+                            onFocus={()=>setMovimentosenha(true)}
+                            onBlur={()=> {if (itemLocalStorage.password.length == 0) {setMovimentosenha(false)}}}
                             />  
                         </LocalInput>
                     </PosiFormLogin> 
                      
-                    <BtnLogin textButton='Log in'/>
+                    <BtnLogin textButton='Log in' onClick={validarDadosLogin}/>
                     <BtnVoltarCad path='/' textButton='Back to registration screen'/>
                 </PosiInput>
             </WrapperEs>
