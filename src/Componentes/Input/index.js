@@ -22,6 +22,7 @@ export const StyleInputSenha = styled.input`
 `
 export const StyleInput = styled.input`
     height: 3.75rem;
+    display: flex;
     width: 23.688rem;
     border-radius: 3.125rem;
     background-color: #26292C;

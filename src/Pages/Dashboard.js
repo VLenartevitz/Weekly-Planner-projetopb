@@ -6,19 +6,11 @@ import { ImgUolStyle } from "../Componentes/ImgUol/styles";
 import { WrapperEs } from "../Componentes/WrapperEs/style";
 import Title from "../Componentes/Title";
 
-const Home = () =>{
+const Dashboard = () =>{
     return(
         <Container>
-            <WrapperEs> 
-                <Title/>
-            </WrapperEs>
-
-            <LaptopImg>
-                <PositionUol>
-                    <ImgUolStyle src={logoUol}/>  
-                </PositionUol>  
-            </LaptopImg>
+            
         </Container>
     );
 }
-export default Home;
+export default Dashboard;

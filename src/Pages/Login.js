@@ -50,7 +50,7 @@ const Login = () =>{
                     </PosiFormLogin> 
                      
                     <BtnLogin textButton='Log in'/>
-                    <BtnVoltarCad path='/' textButton='voltar para a tela de Cadastro'/>
+                    <BtnVoltarCad path='/' textButton='Back to registration screen'/>
                 </PosiInput>
             </WrapperEs>
 
