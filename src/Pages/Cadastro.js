@@ -29,8 +29,7 @@ const Cadastro = () =>{
     });
     
     const armazenar=(chave,valor) =>{
-        // localStorage.removeItem(chave)
-        localStorage.setItem(chave,JSON.stringify(valor)) 
+        localStorage.setItem('chave',JSON.stringify(valor)) 
         navigate('/Login')
         
     }
@@ -182,9 +181,11 @@ const Cadastro = () =>{
         </WrapperEs>
 
         <LaptopImg>
-            <PositionUol>
-                <ImgUolStyle src={logoUol}/>  
+            <a href="https://compass.uol/en/home/">
+            <PositionUol >
+                <ImgUolStyle src={logoUol} />  
             </PositionUol>  
+            </a>
         </LaptopImg>
     </Container>
     );
