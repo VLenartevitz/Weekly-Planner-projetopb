@@ -75,6 +75,8 @@ const Login = () =>{
                      
                     <BtnLogin textButton='Log in' onClick={validarDadosLogin}/>
                     <BtnVoltarCad path='/' textButton='Back to registration screen'/>
+                    <BtnLogin textButton='Log in' onClick={validarDadosLogin}/>
+                    <BtnVoltarCad path='/' textButton='Back to registration screen'/>
                 </PosiInput>
             </WrapperEs>
 
